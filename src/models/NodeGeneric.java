@@ -1,6 +1,6 @@
 package models;
 
-//PILAS - NODO
+//PILAS - NODOS
 public class NodeGeneric <T> {
     private T value; // Valor del nodo
     private NodeGeneric<T> next; //

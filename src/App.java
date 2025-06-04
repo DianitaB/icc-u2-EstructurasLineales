@@ -1,6 +1,8 @@
 import controllers.Cola;
 import controllers.Stack;
 import controllers.StackG;
+import controllers.ColaG;
+import models.Persona;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -43,5 +45,20 @@ public class App {
         cola.remove();
         System.out.println("Tam =  " + cola.size);
         cola.printCola();
+
+        // Tarea
+        Persona p1 = new Persona("Pablo");
+        Persona p2 = new Persona("Juan");
+        Persona p3 = new Persona("Maria");
+
+        ColaG<Persona> colaPersonas = new ColaG<Persona>();
+        colaPersonas.add(p1);
+        colaPersonas.add(p2);
+        colaPersonas.add(p3);
+        System.out.println(colaPersonas.getSize());
+        colaPersonas.printCola();
+        System.out.println("Atiende a la persona -> " + colaPersonas.remove());
+        System.out.println(colaPersonas.getSize());
+        colaPersonas.printCola();
     }
 }
