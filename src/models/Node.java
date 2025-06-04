@@ -1,5 +1,6 @@
 package models;
 
+//PILAS - NODOS
 public class Node {
     private int value;
     private Node next;
@@ -26,7 +27,7 @@ public class Node {
         return next;
     }
 
-    public void setNext(Node next) {
-        this.next = next;
+    public void setNext(Node top) {
+        this.next = top;
     }
 }
