@@ -47,7 +47,7 @@ public class App {
         cola.printCola();
 
         // Tarea
-        Persona p1 = new Persona("Pablo");
+        Persona p1 = new Persona("Pablito");
         Persona p2 = new Persona("Juan");
         Persona p3 = new Persona("Maria");
 
@@ -60,5 +60,13 @@ public class App {
         System.out.println("Atiende a la persona -> " + colaPersonas.remove());
         System.out.println(colaPersonas.getSize());
         colaPersonas.printCola();
+
+        colaPersonas.findByName("David");
+        System.out.println("Encontrado: " + colaPersonas.findByName("Maria"));
+       
+        Persona pEliminada = colaPersonas.removeByName("Juan");
+        System.out.println("Eliminado: " + pEliminada);
+       
+
     }
 }
