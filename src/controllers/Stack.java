@@ -1,7 +1,8 @@
-package controllers;
+package Controllers;
 
 import java.util.EmptyStackException;
-import models.Node;
+
+import Models.Node;
 
 //PILAS
 public class Stack {

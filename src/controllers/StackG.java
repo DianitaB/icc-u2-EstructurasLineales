@@ -1,6 +1,6 @@
-package controllers;
+package Controllers;
 
-import models.NodeGeneric;
+import Models.NodeGeneric;
 
 
 //PILAS

@@ -1,8 +1,9 @@
-import controllers.Cola;
-import controllers.Stack;
-import controllers.StackG;
-import controllers.ColaG;
-import models.Persona;
+import Controllers.Cola;
+import Controllers.ColaG;
+import Controllers.Stack;
+import Controllers.StackG;
+import Materia.Ejercicio_01_sign.SignValidator;
+import Models.Persona;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -66,6 +67,15 @@ public class App {
        
         Persona pEliminada = colaPersonas.removeByName("Juan");
         System.out.println("Eliminado: " + pEliminada);
+
+        SignValidator signValidator = new SignValidator();
+        System.out.println("Input: ([]){} -> " + signValidator.esValido("([]){}")); 
+        System.out.println("Input: ({)} -> " + signValidator.esValido("({)}"));     
+        System.out.println("Input: (([]{)) -> " + signValidator.esValido("(([]))")); 
+        System.out.println("Input: ([)] -> " + signValidator.esValido("([)]"));
+        System.out.println("Input: ([]){} -> " + signValidator.esValido("([]){}"));
+
+
        
 
     }
