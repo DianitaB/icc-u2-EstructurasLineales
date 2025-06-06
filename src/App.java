@@ -3,9 +3,14 @@ import Controllers.ColaG;
 import Controllers.Stack;
 import Controllers.StackG;
 import Materia.Ejercicio_01_sign.SignValidator;
+import Materia.Ejercicio_02_sorting.StackSorter;
 import Models.Persona;
 
 public class App {
+    /**
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         
         Stack stack = new Stack();
@@ -75,8 +80,21 @@ public class App {
         System.out.println("Input: ([)] -> " + signValidator.esValido("([)]"));
         System.out.println("Input: ([]){} -> " + signValidator.esValido("([]){}"));
 
+        Stack stack1 = new Stack();
+        stack1.push(5);
+        stack1.push(1);
+        stack1.push(4);
+        stack1.push(2);
 
-       
+        System.out.println("Antes:");
+        stack1.printStack();  
+
+        StackSorter sorter = new StackSorter();
+        sorter.sortStack(stack1);  
+
+        System.out.println("Después:");
+        stack1.printStack();
+            
 
     }
 }
